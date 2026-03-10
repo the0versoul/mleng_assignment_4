@@ -1,3 +1,5 @@
+"""Writes a timestamped greeting file to the shared output directory."""
+
 import os
 from datetime import datetime
 
@@ -6,6 +8,7 @@ VERSION = "1.0.0"
 
 
 def say_hi(msg: str = "Hi!", file_directory: str = "/app/data/") -> None:
+    """Create a timestamped output file with the given message."""
     timestamp = datetime.now().strftime("%Y%m%d%H%M")
     file_name = f"outputfile_{USER_NAME}_{VERSION}_timestamp_{timestamp}.txt"
     file_path = os.path.join(file_directory, file_name)
@@ -17,6 +20,7 @@ def say_hi(msg: str = "Hi!", file_directory: str = "/app/data/") -> None:
 
 
 def add_numbers(a: int, b: int) -> int:
+    """Return the sum of two integers."""
     return a + b
 
 
